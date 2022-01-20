@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="OldFormat.css" type="text/css" />
+    <title>Keith Gutmann II</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="author" content="Keith E Gutmann II">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="OldIndex.html">Home</a></li>
+                <li><a href="OldCreative.html">Creations</a></li>
+                <li><a href="OldCreative.html">Revisions</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h1>
+            Keith Gutmann II
+        </h1>
+        <p>Creative, steampunk enthusiest, supervisor.</p>
+        <p>
+            I’ve always been drawn to making things more efficient and cutting down on redundancies. As a result, I
+            constantly find myself turning to computer programing as a way to express my creative side while making
+            things easier for those around me. Below are a few visual basic projects I’ve created during my time with
+            Ford Credit. The first one specifically, (StatFormatER) was used by my operation managers direct reports as
+            a
+            way to quickly format reports for team meeting presentations.
+        </p>
+        <h2>StatFormatER (AKA Stat Format Emergency Rescue)</h2>
+        <p>
+            <a href="Pic1.JPG">
+                <aside><img src="Pic1.JPG" class="projects" alt=""></aside>
+            </a>
+            While creating the StatFormatER (an excel spreadsheet that I programmed to run a single macro to format
+            multiple kinds of data) I had a couple goals. One of those was to format our teams quality assurance
+            results. Above you can
+            see an image of what the raw data looked like when we pulled it from the Verint; the site we use to evaluate
+            the quality of the customer service calls that our reps take. In order for the excel macro to function
+            properly the entire sheet of unformatted data would need to be copied over. (I have scribbled out the names
+            of the reps to protect their privacy)
+        </p>
+        <p>
+            <a href="Pic2.JPG">
+                <aside><img src="Pic2.JPG" class="projects" alt=""></aside>
+            </a>
+            To run the macro, I configured a shortcut of Ctrl+Shift+Q. Given the report may contain multiple categories
+            of quality assurance scores, I wrote in a series of loops and if then statements to pull the data and place
+            it in variables. The loops would continue until a new data type was met and the data which was being pulled
+            would need to be written onto the document before writing over the variable with a new set of information.
+            Above you can see the start of this process where the macro has already removed irrelevant data from the
+            report and is checking each line of the 3 most left columns before deciding which column on the right to
+            write the data to.
+        </p>
+        <p>
+            <a href="Pic3.JPG">
+                <aside><img src="Pic3.JPG" class="projects" alt=""></aside>
+            </a>
+            The end result of the quality assurance formatting can be seen above. As you can see, the report I pulled
+            happened to have both chat and phone results. However, I wanted the end result to always look clean, so if
+            only one set of results were found on the initial report there would be only one block of data and the
+            entire group would have been placed at the far-left corner of the sheet. Additionally, the macro would check
+            each average score, sort by highest to lowest, decipher the average for each group and color code the
+            results.
+        </p>
+        <p>
+            <a href="Pic4.JPG">
+                <aside><img src="Pic4.JPG" class="projects" alt=""></aside>
+            </a>
+            The second report the StatFormatER could format was the productivity report (shown above). After copy and
+            pasting this report into the StatFormatER, the employee would press Ctrl+Shift+Q to run the macro. If you’ll
+            notice, I chose the same shortcut keys for both formatting the quality assurance report and the productivity
+            report. To accomplish this, I used an if then statement. I had to find a piece of data to check for on each
+            report that would differentiate the two. Thankfully, the productivity report always pulled with the
+            first-row blank, while the quality assurance report’s first row contained data. I decided to have the
+            program check the first cell and if it was blank it would run the code for formatting the productivity stats
+            and if not, it would run the code for formatting the quality assurance report.
+        </p>
+        <p>
+            <a href="Pic5.JPG">
+                <aside><img src="Pic5.JPG" class="projects" alt=""></aside>
+            </a>
+            Now one thing with the code to format the productivity report; it did not have a max number of results that
+            could be formatted. The code that was written to format the quality assurance report was specifically
+            designed for team results (now the parameters which caused this restriction could have been expanded,
+            however it was not necessary for the intended use). However, the code written to format the productivity
+            stats was significantly simpler to write and did not contain variables that would be used to hold and
+            calculate data.
+        </p>
+        <p>
+            <a href="Pic6.JPG">
+                <aside><img src="Pic6.JPG" class="projects" alt=""></aside>
+            </a>
+            The entire intent of the code was to remove lines that did not contain dates (excluding the final line
+            containing
+            the averages) and color code the ACD-In & Avail column. To accomplish this, I wrote an if then else
+            statement to color code the ACD-In & Avail column and designed the code to check for
+            duplicate names and remove the row that did not contain the date. Above you can see how the final row still
+            only contains the averages.
+        </p>
+        <h2>Quick Tracker</h2>
+        <p>
+            <a href="Pic7.JPG">
+                <aside><img src="Pic7.JPG" class="projects" alt=""></aside>
+            </a>
+            Another project I worked on was a visual basic script file I call the Quick Tracker. While this project was
+            not used as widely as my later created StatFormatER, I still found use out of it while working as a customer
+            service representative. The script came about after I noticed an inefficiency with the contact centers off
+            phone tracking process. While the system would track that we had stepped away from the phone, there were
+            only a set number of non-phone modes and the majority of them were dedicated to tasks we would complete for
+            work while there were only two dedicated to stepping away from our desk (off phone and break). At the time I
+            touched base with my supervisor to ask if we had a way to track the specific reasons a representative had
+            stepped away from the phone. She stated we did and sent me an excel file with a few columns that had headers
+            for the reason, the time that the representative left and the time the representative got back. I used the
+            file
+            to help identify the reason I most frequently stepped away from the phone and while in the long term I was
+            better able to identify and correct the behavior effecting my stats, in the short term I was spending more
+            time off the phone due to entering information into the excel document. As a result, I created the Quick
+            Tracker as shown above.
+        </p>
+        <p>
+            <a href="Pic8.JPG">
+                <aside><img src="Pic8.JPG" class="projects" alt=""></aside>
+            </a>
+            The Quick tracker significantly cut down on the time it took to enter data. This was due to how the Quick
+            Tracker functioned. After selecting the script, a window would pop up requesting the reason the
+            representative was stepping away from the phone (as shown above). The representative would then enter the
+            reason and select OK. (I also built in an if then statement to run the program if the text box contained
+            data and not to run if it did not.) By selecting OK the script would save both the reason and the system
+            time and produce a pop up that would prompt the representative to press OK when back (as shown below).
+        </p>
+        <p>
+            <a href="Pic9.JPG">
+                <aside><img src="Pic9.JPG" class="projects" alt=""></aside>
+            </a>
+            When the representative got back to their computer they could then click on OK or hit enter on their
+            keyboard provided the OK prompt was still the active window. By selecting OK the script would save the
+            current system time and then complete a number of tasks.
+        </p>
+        <p>
+            <a href="Pic10.JPG">
+                <aside><img src="Pic10.JPG" class="projects" alt=""></aside>
+            </a>
+            The first task was to check if a folder named Off Phone Tracker was located on the desktop of the current
+            user. If it was not, the script would then create the folder.
+        </p>
+        <p>
+            <a href="Pic11.JPG">
+                <aside><img src="Pic11.JPG" class="projects" alt=""></aside>
+            </a>
+            The second task after either creating or verifying the Off Phone Tracker folder was on the desktop was to
+            check the folder for an excel file saved in it which was named with todays date.
+        </p>
+        <p>
+            <a href="Pic12.JPG">
+                <aside><img src="Pic12.JPG" class="projects" alt=""></aside>
+            </a>
+            The third task was to either open the excel document that was named after todays date or create and open
+            one.
+        </p>
+        <p>
+            <a href="Pic13.JPG">
+                <aside><img src="Pic13.JPG" class="projects" alt=""></aside>
+            </a>
+            The fourth task was to enter data into the excel file using the information entered by the representative
+            and the times pulled from the system. If the excel document already contained data, the script would enter
+            the information on a new line as shown below. I also programmed the script to create a fourth column that
+            would find the difference in the time the representative left and the time the came back to their computer.
+            The final step was for the script to save a close the file.
+        </p>
+        <p>
+            <a href="Pic14.JPG">
+                <aside><img src="Pic14.JPG" class="projects" alt=""></aside>
+            </a>
+            While the Off Phone Tracker had a multitude of steps to complete upon selecting OK on the final pop up,
+            they would all occure so fast that the representative would not see them.
+        </p>
+    </div>
+</body>
+
+</html>

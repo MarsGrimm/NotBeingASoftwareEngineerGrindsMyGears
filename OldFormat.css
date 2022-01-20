@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   
+   body{
+       background-size: 200px;
+       text-align: center;
+       background-image: url(Background.jpg);
+   }
+   
+   div{
+       background: rgb(255, 255, 255, .80);
+       margin-left: 15%;
+       margin-right: 15%;
+   }
+   
+   nav > ul > li {
+       display: inline-block;
+       width: 80px;
+   }
+   
+   header{
+       background-color: rgb(255, 147, 5);
+       top: 0;
+       left: 0;
+       width: 100%;
+       padding: 10px;
+   }
+   
+   h1{
+       font-family: 'Times New Roman', Times, serif;
+       font-style: bold;
+       padding-top: 20px;
+   }
+   
+   P{
+       padding: 10px;
+   }
+   
+   .images{
+       max-width: 98%;
+   }
+   .projects{
+       max-width: 80%;
+   }
+   .revisions{
+       display: flex;
+   }
+   .sitelinks{
+       max-width: 40%;
+       margin-right: 10px 
+   }
+   .sitepics{
+       max-width: 100%;
+       
+   }
+   
+   
+   
+   
+   
+   
